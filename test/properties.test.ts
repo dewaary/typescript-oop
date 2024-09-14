@@ -10,6 +10,10 @@ describe("PROPERTIES", () => {
             this.name = name
         }
 
+        sayHello(name: string): void{
+            console.info(`Hello ${name} my name is ${this.name}`)
+        }
+
     }
     it("should can have properties", () => {
 
@@ -17,5 +21,10 @@ describe("PROPERTIES", () => {
         customer.age = 27
 
         console.info(customer)
+    })
+
+    it("should can call method", () => {
+        const customer = new Customer(1, "Devi")
+        customer.sayHello("Dewa")
     })
 })
